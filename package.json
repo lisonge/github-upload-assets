@@ -1,0 +1,18 @@
+{
+    "name": "github-upload-assets",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "wrangler dev",
+        "deploy": "wrangler deploy"
+    },
+    "dependencies": {
+        "@cloudflare/workers-types": "^4.20231002.0",
+        "typescript": "^5.2.2",
+        "wrangler": "^3.11.0",
+        "htmlparser2": "^9.0.0"
+    },
+    "volta": {
+        "node": "20.8.0"
+    }
+}

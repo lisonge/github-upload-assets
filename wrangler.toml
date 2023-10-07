@@ -1,0 +1,6 @@
+name = "github-upload-assets"
+main = "src/index.ts"
+compatibility_date = "2023-10-07"
+kv_namespaces = [
+    { binding = "GITHUB", id = "7d1c061d14cb4ae8be246a3a910c643e"},
+]
