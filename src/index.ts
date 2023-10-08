@@ -86,7 +86,7 @@ export default {
             return new Response(
                 JSON.stringify({
                     __error: true,
-                    messsge: e2.message,
+                    message: e2.message,
                 }),
                 {
                     headers: { ...corsHeaders, X_RPC_OK: 'false' },
