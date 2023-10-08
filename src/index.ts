@@ -38,7 +38,7 @@ export default {
             return new Response(
                 JSON.stringify({ message: 'allow all origin cors' }),
                 {
-                    headers: corsHeaders,
+                    headers: { ...corsHeaders, X_RPC_OK: 'true' },
                 }
             );
         }
