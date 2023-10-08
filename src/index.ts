@@ -22,6 +22,7 @@ const corsHeaders: Record<string, string> = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Expose-Headers': '*',
     'Access-Control-Max-Age': '86400',
+    'Access-Control-Allow-Private-Network': 'true',
     'Content-Type': 'application/json; charset=utf-8',
 };
 
@@ -78,7 +79,7 @@ export default {
                 `https://github.com/${repository}/issues/new`
             );
             return new Response(JSON.stringify(policiesAsset), {
-                headers: corsHeaders,
+                headers: { ...corsHeaders, X_RPC_OK: 'true' },
             });
         } catch (e) {
             const e2 = e instanceof Error ? e : new Error(String(e));
@@ -88,7 +89,7 @@ export default {
                     messsge: e2.message,
                 }),
                 {
-                    headers: corsHeaders,
+                    headers: { ...corsHeaders, X_RPC_OK: 'false' },
                 }
             );
         }
